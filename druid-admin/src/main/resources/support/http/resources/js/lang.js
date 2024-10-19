@@ -25,7 +25,7 @@ druid.lang = function() {
 		'JavaVMName' : ['JavaVMName' , 'JVM名称'],
 		'JavaClassPath' : ['JavaClassPath' , 'classpath路径'],
 		'StartTime' : ['StartTime' , '启动时间'],
-		
+
 		'DataSourceStatList' : ['DataSourceStat List' , '数据源列表'],
 		'UserName' : ['UserName', '用户名'],
 		'URL' : ['URL', '连接地址'],
@@ -78,7 +78,7 @@ druid.lang = function() {
 		'ActiveConnectionStackTrace' : ['ActiveConnection StackTrace', '活跃连接堆栈查看'],
 		'PollingConnectionInfo' : ['PollingConnection Info', '连接池中连接信息'],
 		'SQLList' : ['SQL List', 'sql列表'],
-				
+
 		'UserNameDesc' : ['Specify the username used when creating a new connection.', '指定建立连接时使用的用户名'],
 		'URLDesc' : ['The JDBC driver connection URL', 'JDBC连接字符串'],
 		'DbTypeDesc' : ['database type', '数据库类型'],
@@ -170,7 +170,7 @@ druid.lang = function() {
 		'InputStreamOpenCount' : ['InputStreamOpenCount', 'inputstream打开次数'],
 		'ReadStringLength' : ['ReadStringLength', '读取字符串长度'],//
 		'ReadBytesLength' : ['ReadBytesLength', '读取字节长度'],//
-		
+
 		'ExecHisto':['ExecHisto','执行时间分布'],
 		'ExecRsHisto':['ExecRsHisto','执行+RS时分布'],
 		'FetchRowHisto':['FetchRowHisto','读取行分布'],
@@ -179,7 +179,7 @@ druid.lang = function() {
 		'InTransactionCount' : ['Txn','事务执行'],
 		'MaxTimespanDesc' : ['Execute Time Millis Max','最慢的执行耗时'],
 		'InTransactionCountDesc' : ['Execute In Transaction Count','在事务中运行的次数'],
-		
+
 		'count1ms':['count of 0-1 ms','0-1毫秒次数'],
 		'count10ms':['count of 1-10 ms','1-10毫秒次数'],
 		'count100ms':['count of 10-100 ms','10-100毫秒次数'],
@@ -188,14 +188,14 @@ druid.lang = function() {
 		'count100s':['count of 10-100 s','10-100秒次数'],
 		'count1000s':['count of 100-1000 s','100-1000秒次数'],
 		'countBg1000s':['count of >1000 s','大于1000秒次数'],
-		
+
 		'fetch0':['count of 0 FetchRow','读取行数为0'],
 		'fetch9':['count of 1-9 FetchRow','读取行数1-9'],
 		'fetch99':['count of 10-99 FetchRow','读取行数10-99'],
 		'fetch999':['count of 100-999 FetchRow','读取行数100-999'],
 		'fetch9999':['count of 1000-9999 FetchRow','读取行数1000-9999'],
 		'fetch99999':['count of >9999 FetchRow','读取行数大于9999'],
-		
+
 		'update0':['count of 0 UpdateCount','更新行数为0'],
 		'update9':['count of 1-9 UpdateCount','更新行数1-9'],
 		'update99':['count of 10-99 UpdateCount','更新行数10-99'],
@@ -213,12 +213,12 @@ druid.lang = function() {
 		'SyntaxErrrorCount':['SyntaxErrrorCount', '语法错误次数'],
 		'TableName':['TableName', '表名'],
 		'TableNumber':['Number','序号'],
-		
+
 		'Sample':['Sample','样本'],
 		'ExecuteCount':['ExecuteCount','执行数'],
 		'FetchRowCount':['FetchRowCount','读取行数'],
 		'SQLUpdateCount':['UpdateCount','更新行数'],
-		
+
 		'SelectCount':['SelectCount', 'Select数'],
 		'SelectIntoCount':['SelectIntoCount', 'SelectInto数'],
 		'InsertCount':['InsertCount', 'Insert数'],
@@ -259,11 +259,11 @@ druid.lang = function() {
 		'JdbcFetchRowPeak':['JdbcFetchRowPeak', 'jdbc查询取回行数峰值'],
 		'JdbcUpdatePeak':['JdbcUpdatePeak', 'jdbc更新峰值'],
 		'Histogram':['Histogram','区间分布']
-		
+
 	};
-	
+
 	var COOKIE_LANG_NAME = "cookie_lang";
-	
+
 	function log(str) {
 		if (typeof (console) != 'undefined' && typeof(console.log) != 'undefined') {
 			console.log(str);
@@ -271,7 +271,7 @@ druid.lang = function() {
 			$('body').append('<input type="hidden" value="' + str + " />");
 		}
 	}
-	
+
 	function setCookie(name,value,expires,path,domain,secure)
 	{
 		var expDays = expires*24*60*60*1000;
@@ -299,7 +299,7 @@ druid.lang = function() {
 		}
 		return result;
 	}
-	
+
 	function setText($obj) {
 		var key = $obj.attr('langKey');
 		if (typeof(lang[key]) != 'undefined') {
@@ -318,9 +318,9 @@ druid.lang = function() {
 			log('key [' + key + '] not found');
 		}
 	}
-	
+
 	return {
-		langNow : LANG_CN,
+		langNow : LANG_EN,
 		EVENT_LOAD_FINISHED : 'loadFinished',
 		init : function(langNow) {
 			if (typeof(langNow) != 'undefined') {
@@ -340,7 +340,7 @@ druid.lang = function() {
 				setTitle($(this));
 			});
 			this.trigger();
-			
+
 			$(document).on('click','.langSelector',function() {
 				var langSelected = $(this).attr('langNow');
 				druid.lang.setLangType(langSelected);
