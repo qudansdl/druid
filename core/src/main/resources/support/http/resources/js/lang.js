@@ -317,7 +317,7 @@ druid.lang = function () {
     }
 
     return {
-        langNow: LANG_CN,
+        langNow: LANG_EN,
         EVENT_LOAD_FINISHED: 'loadFinished',
         init: function (langNow) {
             if (typeof (langNow) != 'undefined') {
